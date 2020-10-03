@@ -1,9 +1,9 @@
 .zerorad{
-    border-radius: 0%;
+    border-radius: 0!important;
 }
 body{
-    background-color: #b7e8b2;
-    background-image: url("https://www.transparenttextures.com/patterns/black-thread.png");
+    background-color: #327d00!important;
+    background-image: url("https://www.transparenttextures.com/patterns/church.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
