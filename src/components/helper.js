@@ -4,20 +4,16 @@ function newTimer(attrs = {}) {
     return {
         title: attrs.title || 'Timer',
         project: attrs.project || 'Project',
-        id: uuidv4(), // eslint-disable-line no-undef
+        id: uuidv4(), 
         elapsed: 0
     };
 }
  
-function findById(array, id, cb) {
-    cb(array.find(el => el.id === id));
-}
+
  
-function renderElapsedString(elapsed, runningSince) {
+function renderElapsedString(elapsed) {
     let totalElapsed = elapsed;
-    if (runningSince) {
-        totalElapsed += Date.now() - runningSince;
-    }
+    
     return millisecondsToHuman(totalElapsed);
 }
  
@@ -43,6 +39,5 @@ function pad(numberString, size) {
 export default {
     millisecondsToHuman: millisecondsToHuman,
     newTimer: newTimer,
-    findById: findById,
     renderElapsedString: renderElapsedString
 };

@@ -1,25 +1,23 @@
 import React from "react";
 import EditableTimer from "./EditableTimer";
 
-function EditableTimerList(){
+function EditableTimerList(props){
     return(
         <div id='timers' className="text-center py-2">
-<EditableTimer
-title='Learn React'
-project='Web Domination'
-elapsed='8986300'
-runningSince={null}
-editFormOpen={false}
+{props.timers.map((timer)=>(
+    <EditableTimer
+key={timer.id}
+id={timer.id}
+title={timer.title}
+project={timer.project}
+onFormSubmit={props.onFormSubmit}
+onTrashClick={props.onTrashClick}
+
 />
-<EditableTimer
-title='Learn extreme ironing'
-project='World Domination'
-elapsed='3890985'
-runningSince={null}
-editFormOpen={true}
-/>
+))}
 </div>
     );
 }
 
 export default EditableTimerList;
+

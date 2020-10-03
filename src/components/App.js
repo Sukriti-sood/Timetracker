@@ -6,7 +6,7 @@ function App(){
     return(
         <>
         <div className="text-center">
-        <h1 >Timers</h1>
+        <h1 className="head" >Timers</h1>
         <hr></hr>
         </div>
         
